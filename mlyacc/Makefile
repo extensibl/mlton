@@ -13,7 +13,7 @@ BIN := $(BUILD)/bin
 LIB := $(BUILD)/lib
 MLTON := mlton
 TARGET := self
-FLAGS := -target $(TARGET)
+FLAGS := -codegen c -target $(TARGET)
 NAME := mlyacc
 PATH := $(BIN):$(shell echo $$PATH)
 

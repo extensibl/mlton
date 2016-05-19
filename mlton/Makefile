@@ -44,7 +44,7 @@ else
 endif
 endif
 
-FLAGS += -target $(TARGET)
+FLAGS += -codegen c -target $(TARGET)
 FLAGS += -verbose 2 -output "$(AOUT)"
 FLAGS += $(COMPILE_ARGS)
 
