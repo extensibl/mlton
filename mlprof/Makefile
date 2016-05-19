@@ -13,7 +13,7 @@ BIN := $(BUILD)/bin
 LIB := $(BUILD)/lib
 MLTON := mlton
 TARGET := self
-FLAGS := -target $(TARGET) -default-ann 'sequenceNonUnit warn' -default-ann 'warnUnused true'
+FLAGS := -codegen c -target $(TARGET) -default-ann 'sequenceNonUnit warn' -default-ann 'warnUnused true'
 NAME := mlprof
 PATH := $(BIN):$(shell echo $$PATH)
 
