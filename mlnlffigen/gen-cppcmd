@@ -8,7 +8,7 @@ lib="$src/build/lib"
 eval `"$lib/platform"`
 
 output () {
-        echo "val defaultCppCmd = \"gcc $1 -E -U__GNUC__ %o %s > %t\""
+        echo "val defaultCppCmd = \"/usr/local/bin/x86_64-unknown-openbsd5.9-gcc-4.9.3 $1 -E -U__GNUC__ %o %s > %t\""
 }
 
 # The flags here should match the flags used by mlton.  At least the

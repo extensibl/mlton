@@ -224,7 +224,7 @@ for f in *.sml; do
 		if [ 0 -ne `ls $f.[0-9][0-9].[csS] 2>/dev/null | wc -l` ]; then
 			files="$files $f.[0-9][0-9].[csS]"
 		fi
-                gcc -o "$f" -w -O1                              \
+                /usr/local/bin/x86_64-unknown-openbsd5.9-gcc-4.9.3 -o "$f" -w -O1                              \
                         -I "/usr/local/include" \
                         -I "../build/lib/include"               \
 			-I "../build/lib/targets/$crossTarget/include"  \

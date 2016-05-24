@@ -1,6 +1,6 @@
 PATH := ../bin:$(shell echo $$PATH)
 
-CC := gcc -std=gnu99
+CC := /usr/local/bin/x86_64-unknown-openbsd5.9-gcc-4.9.3 -std=gnu99
 CFLAGS := -Wall
 
 EXE :=
