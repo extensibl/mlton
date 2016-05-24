@@ -11,7 +11,7 @@ all: MLRISC/README.mlton
 
 MLRISC/README.mlton: MLRISC.tgz MLRISC.patch
 	rm -rf MLRISC
-	tar -x -z --exclude '*/._*' -f MLRISC.tgz
+	gtar -x -z --exclude '*/._*' -f MLRISC.tgz
 	chmod -R a+r MLRISC
 	chmod -R g-s MLRISC
 	patch -s -d MLRISC -p1 < MLRISC.patch
@@ -23,7 +23,7 @@ clean:
 .PHONY: patch
 patch:
 	mv MLRISC MLRISC-mlton
-	tar -x -z --exclude '*/._*' -f MLRISC.tgz
+	gtar -x -z --exclude '*/._*' -f MLRISC.tgz
 	diff -Naur MLRISC MLRISC-mlton >MLRISC.patch || exit 0
 	rm -rf MLRISC
 	mv MLRISC-mlton MLRISC
