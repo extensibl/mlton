@@ -7,7 +7,7 @@ set -e
 dir=`dirname "$0"`
 lib=`cd "$dir/../lib" && pwd`
 eval `"$lib/platform"`
-gcc='gcc'
+gcc='/usr/local/bin/x86_64-unknown-openbsd5.9-gcc-4.9.3'
 case "$HOST_OS" in
 mingw)
 	exe='.exe'
