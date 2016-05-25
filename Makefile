@@ -36,7 +36,7 @@ CP := /bin/cp -fpR
 GZIP := gzip --force --best
 RANLIB := ranlib
 
-WITH_GMP :=
+WITH_GMP := /usr/local
 ifneq ($(WITH_GMP),)
 WITH_GMP_INC_DIR := $(WITH_GMP)/include
 WITH_GMP_LIB_DIR := $(WITH_GMP)/lib
