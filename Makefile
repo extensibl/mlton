@@ -291,7 +291,7 @@ check:
 # puts them.
 DESTDIR := $(CURDIR)/install
 PREFIX := /usr
-ifeq ($(findstring $(TARGET_OS), darwin freebsd solaris), $(TARGET_OS))
+ifeq ($(findstring $(TARGET_OS), darwin freebsd openbsd solaris), $(TARGET_OS))
 PREFIX := /usr/local
 endif
 ifeq ($(TARGET_OS), mingw)
