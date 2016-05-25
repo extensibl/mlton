@@ -11,7 +11,7 @@ all: ckit/README.mlton
 
 ckit/README.mlton: ckit.tgz ckit.patch
 	rm -rf ckit
-	tar -x -z --exclude '*/._*' -f ckit.tgz
+	gtar -x -z --exclude '*/._*' -f ckit.tgz
 	chmod -R a+r ckit
 	chmod -R g-s ckit
 	chmod a-x ckit/src/ast/simplify-assign-ops.sml
@@ -24,7 +24,7 @@ clean:
 .PHONY: patch
 patch:
 	mv ckit ckit-mlton
-	tar -x -z --exclude '*/._*' -f ckit.tgz
+	gtar -x -z --exclude '*/._*' -f ckit.tgz
 	diff -Naur ckit ckit-mlton >ckit.patch || exit 0
 	rm -rf ckit
 	mv ckit-mlton ckit

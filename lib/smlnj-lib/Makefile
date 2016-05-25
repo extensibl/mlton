@@ -11,7 +11,7 @@ all: smlnj-lib/README.mlton
 
 smlnj-lib/README.mlton: smlnj-lib.tgz smlnj-lib.patch
 	rm -rf smlnj-lib
-	tar -x -z --exclude '*/._*' -f smlnj-lib.tgz
+	gtar -x -z --exclude '*/._*' -f smlnj-lib.tgz
 	chmod -R a+r smlnj-lib
 	chmod -R g-s smlnj-lib
 	patch -s -d smlnj-lib -p1 < smlnj-lib.patch
@@ -24,7 +24,7 @@ clean:
 .PHONY: patch
 patch:
 	mv smlnj-lib smlnj-lib-mlton
-	tar -x -z --exclude '*/._*' -f smlnj-lib.tgz
+	gtar -x -z --exclude '*/._*' -f smlnj-lib.tgz
 	diff -Naur smlnj-lib smlnj-lib-mlton >smlnj-lib.patch || exit 0
 	rm -rf smlnj-lib
 	mv smlnj-lib-mlton smlnj-lib
